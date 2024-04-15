@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Addo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Abhaya Libre' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body bgcolor="#cfd9cb">
+    <div class="loader">
+        <div></div>
+    </div>
+    <div class="content">
+        <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo"><img src="assets/Logo.jpeg" ></label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="myBudgets.html">Budgets</a></li>
+            <li><a href="banquest.html">Banquest</a></li>
+            <li><a href="account.html">Account</a></li>
+            <li><a class="active" href="#">Education</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+        </nav>
+        <div class="investEduBox">
+            <h1>Investing</h1>
+            <h3><br>
+                Investment:  traditionally defined as the "commitment of resources to achieve later benefits". If an investment involves money, then it can be defined as a "commitment of money to receive more money later".
+                <br><br>
+                Ways of making capital gains include:
+                <br>
+                -A company’s share price rising
+                <br>
+                -An increase in the price of bonds on the back of higher demand
+                <br>
+                -The price of a commodity, such as gold or silver, rising as demand increases or supply falls.
+                <br>
+                -An increase in property prices due to a shortage of homes or an area becoming more desirable.
+                <br>
+                <br>
+                -There are four main types of assets for investors to choose from:
+                <br>
+                1. Equities
+                <br>
+                2. Bonds
+                <br>
+                3. Commodities
+                <br>
+                4. Property
+                <br>
+            </h3>
+        </div>
+        <a href="education.html">
+            <button class="backButton">< Back</button>
+        </a>
+        
+     <br><br><br><br><br><br><br>
+        <!-- Creating the footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Addo</h4>
+                        <ul>
+                            <li><a href="home.html">about us</a></li>
+                            <li><a href="myBudgets.html">Budgeting</a></li>
+                            <li><a href="banquest.html">Banquest</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>get help</h4>
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="settings.html">Settings</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <img src="moon.png" id="icon" >
+                        </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            var icon = document.getElementById("icon");
+            icon.onclick=function(){
+                document.body.classList.toggle("dark-theme");
+                if(document.body.classList.contains("dark-theme")){
+                    icon.src="sun.png";
+                }else{
+                    icon.src="moon.png";
+                }
+            }
+          </script>  
+    <script>
+        $(window).on('load',function(){
+            $(".loader").fadeOut(3000);
+            $(".content").fadeIn(3000);
+        });
+    </script>
+  </body>
+</html>

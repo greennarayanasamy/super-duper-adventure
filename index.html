@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Addo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Importing various libraries and linking css file -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Abhaya Libre' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- Creating the class loader which has been style in the style.css file to create 
+        a loading screen for 5 seconds each time you load or refresh a page-->
+    <div class="loader"></div>
+
+    <div class="content">
+        <!-- Creating the navigation bar-->
+        <nav>
+            <input type="checkbox" id="check">
+
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo"><img src="assets/Logo.jpeg"></label>
+
+            <ul class="navbar">
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="myBudgets.html">Budgets</a></li>
+                <li><a href="banquest.html">Banquest</a></li>
+                <li><a href="account.html">Account</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Adding breaks in between sections -->
+        <br><br>
+
+        <cont>
+        <!-- Logo & Text-->
+        <img src="assets/addoLogo.png" border="2">
+
+        <br>
+
+        <h3 style="text-align:center" class="h3text">A simple way to keep track of your spending,  view your current balance and your latest 
+            transactions since your last statement.</h3>
+        </cont>
+
+    </div>
+    <!-- Creating a box displaying balance -->
+    <div class="balanceBox">
+        <h1>Account Balanace</h1>
+        <h2>£452.67</h2>
+        <div class="topright">
+            <button type="button" class="collapsible">
+                <img src="dots.png" href="">
+            </button>
+        </div>
+    </div>
+
+    <!-- Creating buttons that are linked to different pages-->
+    <div class="pigBox"></div>
+    <div class="questionBox"></div>
+    <div class="educateBox"></div>
+    <div class="accountBox"></div>
+
+    <div class="boxes">
+        <!-- this is an attempt to align the boxes center relative -->
+        <a href="myBudgets.html" class="box">
+            <img src="pig.png" href="myBudgets.html" class="pig">
+        </a>
+        <a href="contact.html" class="box">
+            <img src="question.png" href="contact.html" class="question">
+        </a>
+        <a href="education.html" class="box">
+            <img src="educate.png" href="educate.html" class="educate">
+        </a>
+        <a href="account.html" class="box">
+            <img src="account.png" href="account.html" class="account">
+        </a>
+      </div>
+
+      <br><br><br><br><br><br>
+
+      <!-- Creating the footer -->
+      <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Addo</h4>
+                    <ul>
+                        <li><a href="home.html">about us</a></li>
+                        <li><a href="myBudgets.html">Budgeting</a></li>
+                        <li><a href="banquest.html">Banquest</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="settings.html">Settings</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                <img src="moon.png" id="icon" >
+                </div>
+            </div>
+        </div>
+   </footer>
+
+   <!-- Script tag used to embed a client-side script (JavaScript) to help create a 
+    dark mode functionality-->
+   <script>
+    var icon = document.getElementById("icon");
+    icon.onclick=function(){
+        document.body.classList.toggle("dark-theme");
+        if(document.body.classList.contains("dark-theme")){
+            icon.src="sun.png";
+        }else{
+            icon.src="moon.png";
+        }
+    }
+   </script>
+
+    <!-- Script tag used to embed a client-side script (JavaScript) to help create a loading screen-->
+    <script>
+        $(window).on('load',function(){
+            $(".loader").fadeOut(3000);
+            $(".content").fadeIn(3000);
+        });
+    </script>
+  </body>
+</html>

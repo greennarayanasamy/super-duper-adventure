@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Addo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Abhaya Libre' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body bgcolor="#cfd9cb">
+    <div class="loader">
+        <div></div>
+    </div>
+    <div class="content">
+        <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo"><img src="assets/Logo.jpeg" ></label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="myBudgets.html">Budgets</a></li>
+            <li><a href="banquest.html">Banquest</a></li>
+            <li><a href="account.html">Account</a></li>
+            <li><a class="active" href="#">Education</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+        </nav>
+        <div class="eduTitle">
+            <h1>Education Page</h1>
+            <h3 class="eduBio">Below you can find information on vital skills and 
+                financial responsibilites you must learn, click to find out more!</h3>
+        </div>
+        <br><br><br>
+        <br><br><br>
+
+        <!-- Creating a carousel grid which displays boxes for various financial skills -->
+            <div class="carouselTest"> 
+                <div class="budgetingBox"></div>
+                <div class="investingBox"></div>
+                <div class="penaltiesBox"></div>
+                <div class="loansBox"></div>
+                <div class="currencyBox"></div>
+            
+                <div class="boxes">
+                    <!-- this is an attempt to align the boxes center relative -->
+                    <a href="budgetEdu.html" class="box">
+                        <img src="img-1.png" href="myBudgets.html" class="pig">
+                        <h2 class="bd">Budgeting</h2>
+                    </a>
+                    <a href="investEdu.html" class="box">
+                        <img src="img-2.png" href="contact.html" class="question">
+                        <h2 class="bd2">Investing</h2>
+                    </a>
+                    <a href="financeEdu.html" class="box">
+                        <img src="img-3.png" href="educate.html" class="educate">
+                        <h2 class="bd3">Financial Penalties</h2>
+                    </a>
+                    <a href="loanEdu.html" class="box">
+                        <img src="img-4.png" href="account.html" class="account">
+                        <h2 class="bd4">Student Loans</h2>
+                    </a>
+                    <a href="currency.html" class="box">
+                        <img src="img-5.jpg" href="account.html" class="account">
+                        <h2 class="bd5">Currency Exchange</h2>
+                    </a>
+                  </div>
+
+<br><br><br><br><br><br>
+               
+        </div>
+
+        <!-- Creating the footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Addo</h4>
+                        <ul>
+                            <li><a href="home.html">about us</a></li>
+                            <li><a href="myBudgets.html">Budgeting</a></li>
+                            <li><a href="banquest.html">Banquest</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>get help</h4>
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="settings.html">Settings</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <img src="moon.png" id="icon" >
+                        </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            var icon = document.getElementById("icon");
+            icon.onclick=function(){
+                document.body.classList.toggle("dark-theme");
+                if(document.body.classList.contains("dark-theme")){
+                    icon.src="sun.png";
+                }else{
+                    icon.src="moon.png";
+                }
+            }
+          </script>  
+    <script>
+        $(window).on('load',function(){
+            $(".loader").fadeOut(3000);
+            $(".content").fadeIn(3000);
+        });
+    </script>
+  </body>
+</html>

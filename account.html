@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Addo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Abhaya Libre' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body bgcolor="#cfd9cb">
+    <div class="loader">
+        <div></div>
+    </div>
+    <div class="content">
+        <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo"><img src="assets/Logo.jpeg" ></label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="myBudgets.html">Budgets</a></li>
+            <li><a href="banquest.html">Banquest</a></li>
+            <li><a class="active" href="#">Account</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+        </nav>
+
+        <!-- Creating the class accountContainer which is styled in the style.css 
+          that holds various account information about the user-->
+        <div class="accountContainer">
+          <div class="profile-box">
+            <img src="menu.png" class="menu-icon">
+            <img src="setting.png" class="settings-icon">
+            <img src="profile-pic.png" class="profile-pic">
+            <h3>Olivia Smith</h3>
+            <p>Web Develepor At Google, Bristol</p>
+            <div class="social-media">
+              <img src="instagram.png">
+              <img src="telegram.png">
+              <img src="dribble.png">
+            </div>
+            <button type="button">Follow</button>
+            <div class="profile-bottom">
+              <p>Learn More About My Profile</p>
+              <img src="arrow2.png">
+            </div>
+          </div>
+        </div>
+        <br><br><br><br>
+    <!-- Creating the footer -->
+    <footer class="footer">
+      <div class="container">
+          <div class="row">
+              <div class="footer-col">
+                  <h4>Addo</h4>
+                  <ul>
+                      <li><a href="home.html">about us</a></li>
+                      <li><a href="myBudgets.html">Budgeting</a></li>
+                      <li><a href="banquest.html">Banquest</a></li>
+
+                  </ul>
+              </div>
+              <div class="footer-col">
+                  <h4>get help</h4>
+                  <ul>
+                      <li><a href="contact.html">Contact Us</a></li>
+                      <li><a href="settings.html">Settings</a></li>
+                  </ul>
+              </div>
+              
+              <div class="footer-col">
+                  <h4>follow us</h4>
+                  <div class="social-links">
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+              </div>
+              <div class="footer-col">
+                <img src="moon.png" id="icon" >
+                </div>
+          </div>
+      </div>
+ </footer>
+    
+    </div>
+    <script>
+      var icon = document.getElementById("icon");
+      icon.onclick=function(){
+          document.body.classList.toggle("dark-theme");
+          if(document.body.classList.contains("dark-theme")){
+              icon.src="sun.png";
+          }else{
+              icon.src="moon.png";
+          }
+      }
+    </script>
+    <script>
+        $(window).on('load',function(){
+            $(".loader").fadeOut(3000);
+            $(".content").fadeIn(3000);
+        });
+    </script>
+  </body>
+</html>

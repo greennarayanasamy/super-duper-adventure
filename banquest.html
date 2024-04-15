@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Addo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Abhaya Libre' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="game.js" defer></script>
+  </head>
+  <body bgcolor="#cfd9cb">
+    <div class="loader">
+        <div></div>
+    </div>
+    <div class="content">
+        <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo"><img src="assets/Logo.jpeg" ></label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="myBudgets.html">Budgets</a></li>
+            <li><a class="active" href="#">Banquest</a></li>
+            <li><a href="account.html">Account</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+        </nav>
+        <br><br><br>
+        <p class="banquestTitle">Banquest</p>
+        <p class="banquestInfo">Below is a match up game, match up the fruit as fast as possible and beat your time!</p>
+        <br><br><br>
+        <br><br><br>
+        <!-- Creating the class "game" and "container" which is styled and made into a 
+            functional game through the use of Javascript in game.js -->
+        <div class="game">
+          <div class="controls">
+              <button>Start</button>
+              <div class="stats">
+                  <div class="moves">0 moves</div>
+                  <div class="timer">Time: 0 sec</div>
+              </div>
+          </div>
+          <div class="board-container">
+              <div class="board" data-dimension="4"></div>
+              <div class="win">You won!</div>
+          </div>
+      </div>
+      
+    </div>
+    
+
+    
+    <script>
+        $(window).on('load',function(){
+            $(".loader").fadeOut(3000);
+            $(".content").fadeIn(3000);
+        });
+    </script>
+  </body>
+</html>
